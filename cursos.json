@@ -1,0 +1,46 @@
+[
+  {
+    "id": "redacao",
+    "nome": "Curso de Redação",
+    "descricao": "Aprenda a escrever bons textos, da estrutura da dissertação até a argumentação, com a Profa. Pamba.",
+    "numeroAulas": 15,
+    "tags": ["redação", "português", "enem", "escrita"],
+    "area": "Português",
+    "icone": "✍️",
+    "playlist": "PLPwuAOl5BHi8UTmce6l7kWwDVj2oMYPv2",
+    "documentos": []
+  },
+  {
+    "id": "excel-basico",
+    "nome": "Excel Básico",
+    "descricao": "Curso de Excel para iniciantes: fundamentos, fórmulas e os principais recursos da planilha, com o Ninja do Excel.",
+    "numeroAulas": 10,
+    "tags": ["excel", "planilhas", "informática", "iniciante"],
+    "area": "Informática",
+    "icone": "📊",
+    "playlist": "PL_Q1UZN6PAWqrBdTnR7blwmzGXmkPzMVY",
+    "documentos": []
+  },
+  {
+    "id": "fisica-basica",
+    "nome": "Física Básica",
+    "descricao": "Os conceitos fundamentais da física explicados de forma simples, com o canal Ciência Todo Dia.",
+    "numeroAulas": 30,
+    "tags": ["física", "ciências", "ensino médio", "enem"],
+    "area": "Ciências",
+    "icone": "⚛️",
+    "playlist": "PLPz6TqSYQzDYuQ3WqF5plmN0rycwcYULm",
+    "documentos": []
+  },
+  {
+    "id": "geometria",
+    "nome": "Mini Curso de Geometria",
+    "descricao": "Um curso curto para entender as bases da geometria, com o canal Universo Narrado.",
+    "numeroAulas": 5,
+    "tags": ["geometria", "matemática", "ensino médio"],
+    "area": "Matemática",
+    "icone": "📐",
+    "playlist": "PLtjX2mCwXXQvj_5sYuHMdo_E9TZYX1nId",
+    "documentos": []
+  }
+]
