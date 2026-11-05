@@ -4,7 +4,12 @@
     "nome": "Curso de Redação",
     "descricao": "Aprenda a escrever bons textos, da estrutura da dissertação até a argumentação, com a Profa. Pamba.",
     "numeroAulas": 15,
-    "tags": ["redação", "português", "enem", "escrita"],
+    "tags": [
+      "redação",
+      "português",
+      "enem",
+      "escrita"
+    ],
     "area": "Português",
     "icone": "✍️",
     "playlist": "PLPwuAOl5BHi8UTmce6l7kWwDVj2oMYPv2",
@@ -15,7 +20,12 @@
     "nome": "Excel Básico",
     "descricao": "Curso de Excel para iniciantes: fundamentos, fórmulas e os principais recursos da planilha, com o Ninja do Excel.",
     "numeroAulas": 10,
-    "tags": ["excel", "planilhas", "informática", "iniciante"],
+    "tags": [
+      "excel",
+      "planilhas",
+      "informática",
+      "iniciante"
+    ],
     "area": "Informática",
     "icone": "📊",
     "playlist": "PL_Q1UZN6PAWqrBdTnR7blwmzGXmkPzMVY",
@@ -26,7 +36,12 @@
     "nome": "Física Básica",
     "descricao": "Os conceitos fundamentais da física explicados de forma simples, com o canal Ciência Todo Dia.",
     "numeroAulas": 30,
-    "tags": ["física", "ciências", "ensino médio", "enem"],
+    "tags": [
+      "física",
+      "ciências",
+      "ensino médio",
+      "enem"
+    ],
     "area": "Ciências",
     "icone": "⚛️",
     "playlist": "PLPz6TqSYQzDYuQ3WqF5plmN0rycwcYULm",
@@ -37,10 +52,110 @@
     "nome": "Mini Curso de Geometria",
     "descricao": "Um curso curto para entender as bases da geometria, com o canal Universo Narrado.",
     "numeroAulas": 5,
-    "tags": ["geometria", "matemática", "ensino médio"],
+    "tags": [
+      "geometria",
+      "matemática",
+      "ensino médio"
+    ],
     "area": "Matemática",
     "icone": "📐",
     "playlist": "PLtjX2mCwXXQvj_5sYuHMdo_E9TZYX1nId",
+    "documentos": []
+  },
+  {
+    "id": "geopolitica",
+    "nome": "Geopolítica",
+    "descricao": "Entenda as relações de poder entre países, conflitos e o mapa do mundo atual, com Orlando Castro.",
+    "numeroAulas": 15,
+    "tags": [
+      "geopolítica",
+      "geografia",
+      "mundo",
+      "atualidades"
+    ],
+    "area": "Humanas",
+    "icone": "🌍",
+    "playlist": "PLnqNbLTlwwpO5soZl7AuO82tjHyWAFGuu",
+    "documentos": []
+  },
+  {
+    "id": "desenho",
+    "nome": "Curso de Desenho",
+    "descricao": "Aprenda a desenhar passo a passo, das técnicas básicas até a evolução do traço, com Junior Andrade.",
+    "numeroAulas": 54,
+    "tags": [
+      "desenho",
+      "arte",
+      "ilustração",
+      "iniciante"
+    ],
+    "area": "Artes",
+    "icone": "✏️",
+    "playlist": "PLD0wkgDJ147xvKGVOrhWRSn27HdR2bnYp",
+    "documentos": []
+  },
+  {
+    "id": "blender",
+    "nome": "Blender para Iniciantes",
+    "descricao": "Curso completo de Blender: modelagem, materiais e renderização 3D do zero, com o Game Asset Factory.",
+    "numeroAulas": 40,
+    "tags": [
+      "blender",
+      "3d",
+      "modelagem",
+      "design"
+    ],
+    "area": "Design e 3D",
+    "icone": "🧊",
+    "playlist": "PLuuVq4jlL1BR1RlRAAqcsGHlrR0ayRnyn",
+    "documentos": []
+  },
+  {
+    "id": "python-do-zero",
+    "nome": "Python do Zero",
+    "descricao": "Curso de Python completo, organizado por fases, do primeiro código até conteúdos avançados.",
+    "numeroAulas": 175,
+    "tags": [
+      "python",
+      "programação",
+      "lógica",
+      "iniciante"
+    ],
+    "area": "Programação",
+    "icone": "🐍",
+    "playlist": "PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0",
+    "documentos": []
+  },
+  {
+    "id": "filosofia",
+    "nome": "Introdução à Filosofia",
+    "descricao": "Razão, verdade, conhecimento, lógica, metafísica, ciência e cultura: os conceitos-chave da Filosofia.",
+    "numeroAulas": 51,
+    "tags": [
+      "filosofia",
+      "lógica",
+      "pensamento",
+      "humanas"
+    ],
+    "area": "Humanas",
+    "icone": "🏛️",
+    "playlist": "PLhuwT6UtzNblojMC8plKOJIH4gyT8HjmL",
+    "documentos": []
+  },
+  {
+    "id": "empreendedorismo",
+    "nome": "Empreendedorismo",
+    "descricao": "Prepare-se para a jornada empreendedora: ideia, planejamento e como tirar um negócio do papel, com a Unova Cursos.",
+    "numeroAulas": 14,
+    "tags": [
+      "empreendedorismo",
+      "negócios",
+      "carreira",
+      "gestão"
+    ],
+    "area": "Negócios",
+    "icone": "🚀",
+    "playlist": "PLbwiAIDzLPWsUsH-bD_OWonIODH5TXsEH",
     "documentos": []
   }
 ]

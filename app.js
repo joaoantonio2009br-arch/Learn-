@@ -84,6 +84,7 @@ async function pegarUsuarios() {
   return (await r.json()) || {};
 }
 
+
 /* ---------- autenticação ---------- */
 async function cadastrar(e) {
   e.preventDefault();
@@ -205,23 +206,6 @@ function dashboard() {
   const nomeAula = rec ? aulasDe(rec)[Math.min(d.ultima[rec.id] || 0, aulasDe(rec).length - 1)].titulo : '';
   const sem = [...Array(7)].map((_, i) => { const o = i - 6, x = new Date(); x.setDate(x.getDate() + o); return { n: d.log[dia(o)] || 0, l: 'DSTQQSS'[x.getDay()], hoje: o === 0 }; });
   const mx = Math.max(1, ...sem.map(x => x.n));
-  const areas = [...new Set(cursos.map(c => c.area))].map(ar => {
-    const cs = cursos.filter(c => c.area === ar), tot = cs.reduce((a, c) => a + aulasDe(c).length, 0);
-    const ok = cs.reduce((a, c) => a + (d.vistas[c.id] || []).length, 0);
-    return { ar, ok, tot, p: tot ? Math.round(ok / tot * 100) : 0 };
-  });
-  const comp = meus.some(c => pct(c) === 100);
-  const conq = [
-    ['🚀', 'Primeira aula', feitas >= 1], ['📚', '5 aulas', feitas >= 5], ['🔟', '10 aulas', feitas >= 10],
-    ['🔥', '3 dias seguidos', seq >= 3], ['🏆', 'Curso completo', comp], ['🧭', '3 matrículas', meus.length >= 3],
-    ['✍️', 'Anotador', Object.values(d.notas).some(v => v.trim())], ['⭐', 'Favoritou', d.fav.length > 0]];
-  const tarefas = [
-    [`Cumprir a meta de hoje (${hj}/${k.meta} ${k.meta > 1 ? 'aulas' : 'aula'})`, hj >= k.meta, rec ? '#/curso/' + rec.id : '#/cursos'],
-    ['Escrever uma anotação numa aula', !!d.nlog[dia(0)], rec ? '#/curso/' + rec.id : '#/cursos'],
-    ['Matricular-se em um curso', meus.length > 0, '#/cursos'],
-    ['Favoritar um curso', d.fav.length > 0, '#/cursos']];
-  const favs = cursos.filter(c => d.fav.includes(c.id));
-  const outros = cursos.filter(c => !d.mat.includes(c.id)).slice(0, 4);
   shell('dash', `
     <section class="hero">
       <div class="hero-t">
@@ -238,21 +222,8 @@ function dashboard() {
       <div class="stat"><b>${seq}🔥</b><span>Dias seguidos</span></div>
       <div class="stat"><b>${media}%</b><span>Progresso médio</span></div>
     </div>
-    <div class="duo">
-      <section class="panel"><h3>Para fazer</h3>
-        ${tarefas.map(t => `<a class="todo ${t[1] ? 'ok' : ''}" href="${t[2]}"><i>${t[1] ? '✓' : ''}</i><span>${esc(t[0])}</span></a>`).join('')}</section>
-      <section class="panel"><h3>Atividade da semana</h3>
-        <div class="week">${sem.map(x => `<div class="wd ${x.hoje ? 'h' : ''}"><em>${x.n || ''}</em><i style="height:${Math.max(6, x.n / mx * 100)}%"></i><span>${x.l}</span></div>`).join('')}</div></section>
-    </div>
-    <div class="duo">
-      <section class="panel"><h3>Conquistas</h3><div class="badges">${conq.map(c => `<div class="bdg ${c[2] ? 'on' : ''}" title="${c[2] ? 'Conquistada' : 'Bloqueada'}"><span>${c[0]}</span>${c[1]}</div>`).join('')}</div></section>
-      <section class="panel"><h3>Progresso por área</h3>
-        ${areas.map(x => `<div class="area"><div><b>${esc(x.ar)}</b><span>${x.ok}/${x.tot} aulas</span></div><div class="bar"><i style="width:${x.p}%"></i></div></div>`).join('')}</section>
-    </div>
-    <h3>Seus cursos</h3>
-    ${meus.length ? `<div class="grid">${meus.map(card).join('')}</div>` : `<div class="empty">Você ainda não está em nenhum curso. <a href="#/cursos">Escolha um curso</a> para começar.</div>`}
-    ${favs.length ? `<h3>Favoritos</h3><div class="grid">${favs.map(card).join('')}</div>` : ''}
-    ${outros.length ? `<h3>Descubra mais</h3><div class="grid">${outros.map(card).join('')}</div>` : ''}`);
+    <section class="panel"><h3>Atividade da semana</h3>
+      <div class="week">${sem.map(x => `<div class="wd ${x.hoje ? 'h' : ''}"><em>${x.n || ''}</em><i style="height:${Math.max(6, x.n / mx * 100)}%"></i><span>${x.l}</span></div>`).join('')}</div></section>`);
 }
 
 function filtrar() {
